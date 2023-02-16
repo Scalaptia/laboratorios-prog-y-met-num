@@ -16,13 +16,13 @@ int main()
     printf("Dame un numero real o de punto flotante c: ");
     scanf("%f", &c);
 
-    printf("El caracter es %c, entero a es %d, entero b es %d, flotante c es %f ", letra, a, b, c);
+    printf("El caracter es %c, entero a es %d, entero b es %d, flotante c es %.2f ", letra, a, b, c);
     r1 = a + b;
     printf("\nLa suma de a+b=%d", r1);
     r1 = a % b;
     printf("\nEl residuo de a+b=%d", r1);
     r2 = (float) a/b;
-    printf("\nLa división normal es %f ", r2);
+    printf("\nLa division normal es %.2f ", r2);
     printf("\n\nFHC");
     return 0;
 }
