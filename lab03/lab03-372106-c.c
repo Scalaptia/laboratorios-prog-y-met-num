@@ -1,17 +1,17 @@
 //Fernando Haro Calvo
 
 #include <stdio.h>
+#define PI 3.1416
 
 int main() {
     char opcion;
     float base, altura, radio, lado, angulo, area, apotema;
     
-    printf("Seleccione una opcion:\n");
     printf("T) Area del triangulo\n");
     printf("C) Area del circulo\n");
     printf("P) Area del pentagono\n");
     printf("S) Area del Sector circular\n");
-    
+    printf("Seleccione una opcion [T,C,P,S]\n");
     scanf("%c", &opcion);
     
     switch (opcion) {
@@ -31,7 +31,7 @@ int main() {
             printf("\nIngrese el radio del circulo: ");
             scanf("%f", &radio);
             
-            area = 3.1416 * radio * radio;
+            area = PI * radio * radio;
             
             printf("\nEl area del circulo es: %.2f\n", area);
             break;
@@ -55,7 +55,7 @@ int main() {
             printf("Ingrese el angulo del sector circular: ");
             scanf("%f", &angulo);
             
-            area = (3.1416 * radio * radio * angulo) / 360;
+            area = (PI * radio * radio * angulo) / 360;
             
             printf("\nEl area del sector circular es: %.2f\n", area);
             break;
