@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    float monto, descuento, total;
+    float monto = 1, descuento, total;
 
-    while(1) {
+    while(monto != 0) {
+        descuento = 0;
         printf("Ingrese el monto de venta (ingrese 0 para salir): ");
         scanf("%f", &monto);
 
-        if (monto == 0) {
-            break;
-        } else if (monto < 500) {
+        if (monto < 500) {
             descuento = 0;
         } else if (monto <= 1000) {
             descuento = monto * 0.05;
