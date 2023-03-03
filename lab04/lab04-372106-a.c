@@ -1,3 +1,5 @@
+// Fernando Haro Calvo
+
 #include <stdio.h>
 
 int main() {
@@ -25,5 +27,6 @@ int main() {
         printf("Total a pagar: %.2f\n", total);
     }
 
+    printf("FHC");
     return 0;
 }
