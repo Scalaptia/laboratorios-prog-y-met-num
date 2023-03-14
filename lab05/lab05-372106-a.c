@@ -14,7 +14,7 @@ int main(){
         c = c+1;
     }
 
-    printf("El numero b cabe %d veces dentro del numero b", c);
+    printf("El numero b cabe %d veces dentro del numero a", c);
     printf("\nFHC");
     return 0;
 }

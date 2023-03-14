@@ -21,7 +21,7 @@ int main(){
         case '1':
             printf("Ingresa la cantiad del prestamo: ");
             scanf("%f", &prestamo);
-            interes = prestamo * 0.20;
+            interes = prestamo * 0.20; 
             total_a_pagar = prestamo + interes;
             mensualidad = total_a_pagar/18;
             printf("\nInteres: $%.2f\n", interes);
