@@ -1,6 +1,8 @@
+// Fernando Haro Calvo
+
 #include <stdio.h>
 
-int main(){
+int main() {
     int mayor, c=0, n;
 
     printf("1) Introduce un numero: ");
@@ -15,5 +17,8 @@ int main(){
             mayor = n;
         }
     }
+
     printf("\nEl mayor es: %d", mayor);
+    printf("\n\nFHC");
+    return 0;
 }

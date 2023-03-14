@@ -1,6 +1,8 @@
+// Fernando Haro Calvo
+
 #include <stdio.h>
 
-int main(){
+int main() {
     int suma, n, c, edad, bebes = 0, ninos = 0, adolescentes = 0, adultos = 0;
     float promedio;
 
@@ -30,6 +32,6 @@ int main(){
     printf("\nAdolescentes: %d", adolescentes);
     printf("\nAdultos: %d", adultos);
 
-
+    printf("\n\nFHC");
     return 0;
 }
