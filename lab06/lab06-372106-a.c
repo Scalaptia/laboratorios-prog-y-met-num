@@ -9,11 +9,12 @@ int main() {
     printf("\nIntroduce la cantidad de personas: ");
     scanf("%d", &n);
 
+    suma = 0;
     for (c = 1; c<=n; c++){
         printf("Introduce la edad %d: ", c);
         scanf("%d", &edad);
 
-        if ((edad == 0) && (edad <= 3)) {
+        if ((edad >= 0) && (edad <= 3)) {
             bebes++;
         } else if ((edad >= 4) && (edad <= 12)){
             ninos++;
