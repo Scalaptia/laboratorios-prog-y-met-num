@@ -17,7 +17,7 @@ int esIdentidad() {
         for (int c = 0; c < 5; c++) {
             if ((r==c) && (matriz[r][c] != 1)) {
                 flag = 0;
-            } else if ((r != c) && (matriz[r][c] != 0)) {
+            } else if ((r != c) && (matriz[r][c] == 1)) {
                 flag = 0;
             }
         }
