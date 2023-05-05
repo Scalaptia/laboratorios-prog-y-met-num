@@ -52,5 +52,7 @@ void mostrar_polinomioNewton() {
 int main() {
     obtener_coeficientes();
     mostrar_polinomioNewton();
+
+    printf("\n\n FHC");
     return 0;
 }
