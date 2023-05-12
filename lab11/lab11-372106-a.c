@@ -38,11 +38,14 @@ void obtener_coeficientes() {
 }
 
 void mostrar_polinomioNewton() {
-    printf("f(x)= %.0f \n", a[0]);
+    printf("f(x)= %.0f", a[0]);
 
     for (int i=1; i<=GRADO; i++) {
-        printf("\n + %.0f ", a[i]);
-
+        if (a[i] == 0) {
+            continue;
+        } else {
+            printf("\n + %.0f ", a[i]);
+        }
         for(int k=0; k<i; k++) {
             printf("(x - (%.0f))", tabla[k][0]);
         }
