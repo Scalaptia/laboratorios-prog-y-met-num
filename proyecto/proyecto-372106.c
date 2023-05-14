@@ -51,6 +51,6 @@ int main() {
     }
 
     regresion_exponencial(npuntos);
-    printf("\n\nFHC");
+    printf("\nFHC");
     return 0;
 }

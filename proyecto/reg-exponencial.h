@@ -1,4 +1,4 @@
-//Fernando Haro Calvo
+// Fernando Haro Calvo
 #include <stdio.h>
 #include <math.h>
 float fyprima(int i) {
@@ -37,13 +37,13 @@ float sumatoriaYprima(int npuntos) {
 }
 
 float promedioX(int npuntos) {
-    float promX;
+    float promX = 0;
     promX = sumatoriaX(npuntos) / npuntos;
     return promX;
 }
 
 float promedioYprima(int npuntos) {
-    float promYprima;
+    float promYprima = 0;
     promYprima = sumatoriaYprima(npuntos) / npuntos;
     return promYprima;
 }
@@ -57,7 +57,7 @@ float sumatoriaXcuadrado(int npuntos) {
 }
  
 float sumatoriaXYprima(int npuntos) {
-    float sumXYprima=0;
+    float sumXYprima = 0;
     for(int i = 0; i < npuntos; i++) {
         sumXYprima = sumXYprima + (fx(i) * fyprima(i));
     }
@@ -66,7 +66,7 @@ float sumatoriaXYprima(int npuntos) {
 
 float obtenerB(int npuntos) {
     float b, sumXYprima, sumX, sumYprima, sumX2;
-    b = obtenerB(npuntos);
+    sumXYprima = sumatoriaXYprima(npuntos);
     sumX = sumatoriaX(npuntos);
     sumYprima = sumatoriaYprima(npuntos);
     sumX2 = sumatoriaXcuadrado(npuntos);
@@ -80,11 +80,21 @@ float obtenerAprima(int npuntos) {
     promX = promedioX(npuntos);
     promYprima = promedioYprima(npuntos);
     aprima = promYprima - (b * promX);
+    
     return aprima;
 }
 
+float obtenerA(int npuntos) {
+    float a, aprima;
+    double euler = exp(1.0);
+    aprima = obtenerAprima(npuntos);
+    a = aprima * euler;
+    
+    return a;
+}
+
 void mostrarEcuacion(int npuntos) {
-    printf("SumX= %f \n", sumatoriaX(npuntos));
+    printf("\nSumX= %f \n", sumatoriaX(npuntos));
     printf("SumY'= %f \n", sumatoriaYprima(npuntos));
     printf("SumXY'= %f \n", sumatoriaXYprima(npuntos));
     printf("SumX^2= %f \n", sumatoriaXcuadrado(npuntos));
@@ -92,7 +102,7 @@ void mostrarEcuacion(int npuntos) {
     printf("PromY'= %f \n", promedioYprima(npuntos));
     printf("B= %f \n", obtenerB(npuntos));
     printf("A'= %f \n", obtenerAprima(npuntos));
-    printf("Ecuacion: f(x)= %fe^%fx \n", obtenerAprima(npuntos), obtenerB(npuntos));
+    printf("\nEcuacion: f(x)= %fe^%fx \n", obtenerA(npuntos), obtenerB(npuntos));
 }
 
 void regresion_exponencial(int npuntos) {
