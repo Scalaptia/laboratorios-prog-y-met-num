@@ -1,6 +1,7 @@
 // Fernando Haro Calvo
 #include <stdio.h>
 #include <math.h>
+
 float fyprima(int i) {
     return tabla[i][2];
 }
