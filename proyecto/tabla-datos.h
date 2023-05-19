@@ -1,6 +1,7 @@
 // Fernando Haro Calvo
 #include <stdio.h>
 #define MAX 20
+
 float tabla[MAX][3];
 float f(float x) {
     float y= x*x+3;

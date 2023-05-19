@@ -4,6 +4,7 @@
 #include "./tabla-datos.h"
 #include "./reg-exponencial.h"
 #include "./trapecio.h"
+#include "./simpson1tercio.h"
 
 int showMenu() {
     int opcion = 0;
@@ -59,7 +60,11 @@ int main() {
             break;
 
         case 2:
-            trapecio (x0, xn, npuntos);
+            trapecio(x0, xn, npuntos);
+            break;
+
+        case 3:
+            simpson1tercio(x0, xn, npuntos);
             break;
     }
 
