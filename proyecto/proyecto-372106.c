@@ -5,6 +5,7 @@
 #include "./reg-exponencial.h"
 #include "./trapecio.h"
 #include "./simpson1tercio.h"
+#include "./simpson3octavos.h"
 
 int showMenu() {
     int opcion = 0;
@@ -17,7 +18,7 @@ int showMenu() {
         printf("5) Simpson combinado\n");
         printf("\nSeleccione opcion (1, 2, 3, 4, 5): ");
         scanf("%d", &opcion);
-    } while(opcion < 1 || opcion > 3);
+    } while(opcion < 1 || opcion > 5);
 
     return opcion;
 }
@@ -66,6 +67,9 @@ int main() {
         case 3:
             simpson1tercio(x0, xn, npuntos);
             break;
+
+        case 4:
+            simpson3octavos(x0, xn, npuntos);
     }
 
     printf("\nFHC");
