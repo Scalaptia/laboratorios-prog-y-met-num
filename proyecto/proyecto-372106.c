@@ -6,6 +6,7 @@
 #include "./trapecio.h"
 #include "./simpson1tercio.h"
 #include "./simpson3octavos.h"
+#include "./simpson_combinado.h"
 
 int showMenu() {
     int opcion = 0;
@@ -65,11 +66,17 @@ int main() {
             break;
 
         case 3:
-            simpson1tercio(x0, xn, npuntos);
+            float area = simpson1tercio(x0, xn, npuntos);
+            printf("El area es %f \n", area);
             break;
 
         case 4:
-            simpson3octavos(x0, xn, npuntos);
+            simpson3octavos(x0, xn, 0);
+            break;
+
+        case 5: 
+            simpsoncombinado(npuntos);
+            break;
     }
 
     printf("\nFHC");
