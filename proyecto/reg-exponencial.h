@@ -89,7 +89,7 @@ float obtenerA(int npuntos) {
     float a, aprima;
     double euler = exp(1.0);
     aprima = obtenerAprima(npuntos);
-    a = aprima * euler;
+    a = pow(euler, aprima);
     
     return a;
 }

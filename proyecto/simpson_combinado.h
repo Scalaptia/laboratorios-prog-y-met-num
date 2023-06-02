@@ -3,7 +3,7 @@
 
 void simpsoncombinado (int npuntos) {
     float area1, area2, areaTotal;
-    int a, b;
+    float a, b;
     int n = npuntos - 3;
     int k = npuntos - 4;
     
